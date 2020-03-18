@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   scope '/contributors' do
     post :donate, to: 'contributors#donate', as: 'contributor_donate'
-    post :success, to: 'contributors#success', as: 'contributor_success'
-    post :cancel, to: 'contributors#cancel', as: 'contributor_cancel'
+    get :success, to: 'contributors#success', as: 'contributor_success'
+    get :cancel, to: 'contributors#cancel', as: 'contributor_cancel'
   end
   
   root to: "contributors#index"

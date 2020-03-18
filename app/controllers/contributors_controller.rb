@@ -19,7 +19,7 @@ class ContributorsController < ApplicationController
   	end
   end
 
-   def donate
+  def donate
     con =Contributor.find(params[:id])
     	if con.nil?
     		redirect_to root_path
@@ -42,6 +42,10 @@ class ContributorsController < ApplicationController
     respond_to do |format|
    		format.js
    	end
+  end
+
+  def success
+    
   end
 
   private
