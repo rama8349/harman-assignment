@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Donations</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  
+
+  <meta name="stripe-key" content="<%= ENV['PUBLISHABLE_KEY'] %>" />
+  <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<script src="https://js.stripe.com/v3/"></script>
+<p class="navbar-text float-right">
+  <% if contributor_signed_in? %>
+  Logged in as <strong><%= current_contributor.email %></strong>.
+  <%= link_to 'Edit profile', edit_contributor_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_contributor_session_path, method: :delete, :class => 'navbar-link'  %>
+  <% else %>
+  <%= link_to "Sign up", new_contributor_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_contributor_session_path, :class => 'navbar-link'  %>
+  <% end %>
+</p>
+<body>
+  <%= yield %>
+</body>
+</html>

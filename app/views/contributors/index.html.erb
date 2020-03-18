@@ -1,0 +1,23 @@
+
+<% if contributor_signed_in? %>
+<fieldset>
+<%=link_to "Add Bio", add_bio_contributor_path(current_contributor.id) %>
+</fieldset>
+<%else%>
+<h1>All Contributors</h1>
+
+<table border="0">
+  <tr>
+    <th>email</th>
+    <th>Bio</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+  <%@con.each do |c|%>
+  <td><%=c.email%></td><td><%=c.bio%><td><%=c.price%></td></td><td><%=button_to "Donate", contributor_donate_path, method: :post, params: {id: c.id}, remote: true %></td>
+  </tr>
+  <%end%>
+
+</table>
+<%end%>
+
