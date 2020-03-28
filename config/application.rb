@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Donations
   class Application < Rails::Application
+  	#config.active_job.queue_adapter = :sidekiq
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
     #config.stripe.publishable_key = 'pk_test_bdy9udztxZGdCPUYeMX6nrz1004OGkZgjU'

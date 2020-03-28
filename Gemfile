@@ -10,13 +10,15 @@ gem "jquery-rails"
 gem "money-rails"
 gem 'stripe'
 gem 'pry'
-# gem 'stripe-rails'
+gem 'sidekiq'
+gem 'sinatra'
+gem 'forecast_io'
+gem 'figaro'
+gem 'bootstrap'
+gem 'react-rails'
+gem 'foreman'
+# gem 'redis'
 
-# gem 'stripe_event'
-  
-# group :test do
-#   gem 'stripe-ruby-mock'
-# end
 
 gem 'simple_form'
 

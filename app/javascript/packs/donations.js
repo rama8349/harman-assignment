@@ -1,3 +1,7 @@
+import "bootstrap";
+//import "../stylesheets/application";
+
+
 $(function() {
 	$('#email_1').click(function(event){
 		alert('ram')
