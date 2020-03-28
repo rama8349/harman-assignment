@@ -1,4 +1,0 @@
-development:
-  STRIPE_PUBLISHABLE_KEY: 'pk_test_bdy9udztxZGdCPUYeMX6nrz1004OGkZgjU'
-  STRIPE_SECRET_KEY:  'sk_test_aYaoJEgGoHQ7zg3BqwHytxhF008qpb5fTN'
-  
